@@ -586,7 +586,7 @@ function Library:create(options)
 		Position = UDim2.new(0, 26, 0.5, 0),
 		BackgroundTransparency = 1,
 		Size = UDim2.new(1, -30, .6, 0),
-		Text = options.Link .. "/home",
+		Text = options.Link .. "",
 		Theme = {TextColor3 = "WeakText"},
 		TextSize = 14,
 		TextScaled = false,
@@ -885,23 +885,8 @@ function Library:create(options)
         Name = "Panic Button",
         Description = "Closes Roblox",
         Callback = function()
-            local player = game.Players.LocalPlayer
-            local screenGui = Instance.new("ScreenGui", player.PlayerGui)
-            local frame = Instance.new("Frame", screenGui)
-            frame.Size = UDim2.new(1, 0, 1, 0)
-            frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-            frame.BackgroundTransparency = 0.5
-            
-            local textLabel = Instance.new("TextLabel", frame)
-            textLabel.Text = "Closing Roblox..."
-            textLabel.Size = UDim2.new(1, 0, 1, 0)
-            textLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
-            textLabel.TextScaled = true
-            
-            wait(2)
-            
-            game:Shutdown()
-        end
+           game:Shutdown()
+        end,
     }
     
     local creditsTab = Library.tab(mt, {
