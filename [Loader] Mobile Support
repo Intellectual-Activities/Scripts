@@ -880,8 +880,31 @@ function Library:create(options)
 			Library.DragSpeed = (20 - value)/100
 		end,
 	}
-
-	local creditsTab = Library.tab(mt, {
+             
+    settingsTab:Button{
+        Name = "Panic Button",
+        Description = "Closes Roblox",
+        Callback = function()
+            local player = game.Players.LocalPlayer
+            local screenGui = Instance.new("ScreenGui", player.PlayerGui)
+            local frame = Instance.new("Frame", screenGui)
+            frame.Size = UDim2.new(1, 0, 1, 0)
+            frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+            frame.BackgroundTransparency = 0.5
+            
+            local textLabel = Instance.new("TextLabel", frame)
+            textLabel.Text = "Closing Roblox..."
+            textLabel.Size = UDim2.new(1, 0, 1, 0)
+            textLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
+            textLabel.TextScaled = true
+            
+            wait(2)
+            
+            game:Shutdown()
+        end
+    }
+    
+    local creditsTab = Library.tab(mt, {
 		Name = "Information",
 		Internal = creditsTabIcon,
 		Icon = "http://www.roblox.com/asset/?id=8577523456"
@@ -892,42 +915,8 @@ function Library:create(options)
 	creditsTab:credit{Name = "Coded By:", Description = "Intellectual.Co", Discord = "Drumman."}
 	creditsTab:credit{Name = "Appreciation", Description = "UI Script Developer", Discord = "Drumman."}
 	creditsTab:credit{Name = "Yap", Description = "Free Scripts on my Github>", Github="https://github.com/Intellectual-Activities/Scripts"}
-    creditsTab:Button{
-        Name = "Exciting Button",
-        Description = "Click me for an explosion!",
-        Callback = function()
-            local player = game.Players.LocalPlayer
-            local character = player.Character
-            local torso = character:FindFirstChild("HumanoidRootPart")
-            
-            if torso then
-               
-                local explosion = Instance.new("Explosion")
-                explosion.Position = torso.Position
-                explosion.BlastRadius = 10
-                explosion.BlastPressure = 5000
-                explosion.Parent = workspace
-    
-                local particleEmitter = Instance.new("ParticleEmitter")
-                particleEmitter.Texture = "rbxassetid://12345678" -- Replace with your particle texture ID
-                particleEmitter.Lifetime = NumberRange.new(0.5, 1)
-                particleEmitter.Rate = 100
-                particleEmitter.Parent = torso
-                
-                local screenGui = Instance.new("ScreenGui", player.PlayerGui)
-                local frame = Instance.new("Frame", screenGui)
-                frame.BackgroundColor3 = Color3.fromRGB(255, 0, 0) -- Red color
-                frame.Size = UDim2.new(1, 0, 1, 0)
-                frame.BackgroundTransparency = 0.5
-    
-                game:GetService("TweenService"):Create(frame, TweenInfo.new(1), {BackgroundTransparency = 1}):Play()
-                wait(1)
-                screenGui:Destroy() -- Clean up
-            end
-        end
-    }
-    
-	return mt
+
+    return mt
 end
 
 function Library:notification(options)
