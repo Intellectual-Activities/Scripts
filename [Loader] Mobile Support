@@ -24,7 +24,7 @@ local Library = {
 			StrongText = Color3.fromHSV(0, 0, 0.9),  
 			WeakText = Color3.fromHSV(0, 0, 0.6)     
 		},
-		Legacy1 = {
+		Touch = {
 			Main = Color3.fromHSV(210/360, 0.6, 0.3),
 			Secondary = Color3.fromHSV(200/360, 0.5, 0.5),
 			Tertiary = Color3.fromHSV(180/360, 0.4, 0.7),
@@ -40,7 +40,7 @@ local Library = {
 			StrongText = Color3.fromHSV(0, 0, 0.95),
 			WeakText = Color3.fromHSV(0, 0, 0.7)
 		},
-		Legacy3 = {
+		dang = {
 			Main = Color3.fromHSV(300/360, 0.7, 0.4),
 			Secondary = Color3.fromHSV(320/360, 0.6, 0.5),
 			Tertiary = Color3.fromHSV(340/360, 0.5, 0.7),
@@ -49,9 +49,7 @@ local Library = {
 			WeakText = Color3.fromHSV(0, 0, 0.65)
 		},
 		
-		
-	
-		Vaporwave = {},
+        Vaporwave = {},
 		OperaGX = {},
 		VisualStudio = {}
 	},
