@@ -32,7 +32,7 @@ local Library = {
 			StrongText = Color3.fromHSV(0, 0, 1),
 			WeakText = Color3.fromHSV(0, 0, 0.75)
 		},
-	    dang = {
+	        dang = {
 			Main = Color3.fromHSV(300/360, 0.7, 0.4),
 			Secondary = Color3.fromHSV(320/360, 0.6, 0.5),
 			Tertiary = Color3.fromHSV(340/360, 0.5, 0.7),
