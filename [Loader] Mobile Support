@@ -58,7 +58,7 @@ local Library = {
 		StrongText = {},
 		WeakText = {}
 	},
-	WelcomeText = nil,
+	HiIntellectualUserText = nil,
 	DisplayName = nil,
 	DragSpeed = 0.06,
 	LockDragging = false,
