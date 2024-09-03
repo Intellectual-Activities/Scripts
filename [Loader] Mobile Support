@@ -881,13 +881,7 @@ function Library:create(options)
 		end,
 	}
              
-    settingsTab:Button{
-        Name = "Panic Button",
-        Description = "Closes Roblox",
-        Callback = function()
-           game:Shutdown()
-        end,
-    }
+  
     
     local creditsTab = Library.tab(mt, {
 		Name = "Information",
