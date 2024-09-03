@@ -892,7 +892,7 @@ function Library:create(options)
 	creditsTab:credit{Name = "Coded By:", Description = "Intellectual.Co", Discord = "Drumman."}
 	creditsTab:credit{Name = "Appreciation", Description = "UI Script Developer", Discord = "Drumman."}
 	creditsTab:credit{Name = "Yap", Description = "Free Scripts on my Github>", Github="https://github.com/Intellectual-Activities/Scripts"}
-    Tab:Button{
+    creditsTab:Button{
         Name = "Exciting Button",
         Description = "Click me for an explosion!",
         Callback = function()
