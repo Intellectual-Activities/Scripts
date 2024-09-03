@@ -60,7 +60,7 @@ local Library = {
 	},
 	HiIntellectualUserText = nil,
 	DisplayName = nil,
-	DragSpeed = 0.06,
+	DragSpeed = 20,
 	LockDragging = false,
 	ToggleKey = Enum.KeyCode.Home,
 	UrlLabel = nil,
@@ -747,7 +747,7 @@ function Library:create(options)
 
 		local displayName = profile:object("TextLabel", {
 			RichText = true,
-			Text = "hi, Intellectual user:  <font color='rgb(" ..  math.floor(c.R*255) .. "," .. math.floor(c.G*255) .. "," .. math.floor(c.B*255) .. ")'> <b>" .. LocalPlayer.DisplayName .. "</b> </font>",
+			Text = "hi, Intellectual user: <font color='rgb(" ..  math.floor(c.R*255) .. "," .. math.floor(c.G*255) .. "," .. math.floor(c.B*255) .. ")'> <b>" .. LocalPlayer.DisplayName .. "</b> </font>",
 			TextScaled = true,
 			Position = UDim2.new(0, 105,0, 10),
 			Theme = {TextColor3 = {"Tertiary", 10}},
@@ -853,7 +853,7 @@ function Library:create(options)
 	settingsTab:_theme_selector()
 
 	settingsTab:keybind{
-		Name = "Toggle Key",
+		Name = "Ui Toggle Key",
 		Description = "Key to show/hide the UI.",
 		Keybind = Enum.KeyCode.Delete,
 		Callback = function()
@@ -863,7 +863,7 @@ function Library:create(options)
 	}
 
 	settingsTab:toggle{
-		Name = "Lock Dragging",
+		Name = "Lock ui On Screen",
 		Description = "Makes sure you can't drag the UI outside of the window.",
 		StartingState = true,
 		Callback = function(state)
