@@ -17,13 +17,39 @@ local Library = {
 			WeakText = Color3.fromHSV(0, 0, 0.6)     
 		},
 		Ninja = {
-			Main = Color3.fromHSV(0, 0, 0.1),        
-			Secondary = Color3.fromHSV(0, 0, 0.3),   
-			Tertiary = Color3.fromHSV(0, 0, 0.6),    
+			Main = Color3.fromHSV(0, 0, 0.05),      
+			Secondary = Color3.fromHSV(0, 0, 0.15), 
+			Tertiary = Color3.fromHSV(0, 0, 0.4),    
 		
-			StrongText = Color3.fromHSV(0, 0, 1),    
-			WeakText = Color3.fromHSV(0, 0, 0.7)     
+			StrongText = Color3.fromHSV(0, 0, 0.9),  
+			WeakText = Color3.fromHSV(0, 0, 0.6)     
 		},
+		Legacy1 = {
+			Main = Color3.fromHSV(210/360, 0.6, 0.3),
+			Secondary = Color3.fromHSV(200/360, 0.5, 0.5),
+			Tertiary = Color3.fromHSV(180/360, 0.4, 0.7),
+		
+			StrongText = Color3.fromHSV(0, 0, 1),
+			WeakText = Color3.fromHSV(0, 0, 0.75)
+		},
+		Legacy2 = {
+			Main = Color3.fromHSV(30/360, 0.8, 0.4),
+			Secondary = Color3.fromHSV(45/360, 0.7, 0.6),
+			Tertiary = Color3.fromHSV(60/360, 0.5, 0.8),
+		
+			StrongText = Color3.fromHSV(0, 0, 0.95),
+			WeakText = Color3.fromHSV(0, 0, 0.7)
+		},
+		Legacy3 = {
+			Main = Color3.fromHSV(300/360, 0.7, 0.4),
+			Secondary = Color3.fromHSV(320/360, 0.6, 0.5),
+			Tertiary = Color3.fromHSV(340/360, 0.5, 0.7),
+		
+			StrongText = Color3.fromHSV(0, 0, 0.9),
+			WeakText = Color3.fromHSV(0, 0, 0.65)
+		},
+		
+		
 	
 		Vaporwave = {},
 		OperaGX = {},
