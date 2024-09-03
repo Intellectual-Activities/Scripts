@@ -32,7 +32,7 @@ local Library = {
 			StrongText = Color3.fromHSV(0, 0, 1),
 			WeakText = Color3.fromHSV(0, 0, 0.75)
 		},
-	        dang = {
+	    dang = {
 			Main = Color3.fromHSV(300/360, 0.7, 0.4),
 			Secondary = Color3.fromHSV(320/360, 0.6, 0.5),
 			Tertiary = Color3.fromHSV(340/360, 0.5, 0.7),
@@ -88,7 +88,7 @@ end
 function Library:change_theme(toTheme)
 	Library.CurrentTheme = toTheme
 	local c = self:lighten(toTheme.Tertiary, 20)
-	Library.DisplayName.Text = "Welcome, <font color='rgb(" ..  math.floor(c.R*255) .. "," .. math.floor(c.G*255) .. "," .. math.floor(c.B*255) .. ")'> <b>" .. LocalPlayer.DisplayName .. "</b> </font>"
+	Library.DisplayName.Text = "Hi Intellectual User: <font color='rgb(" ..  math.floor(c.R*255) .. "," .. math.floor(c.G*255) .. "," .. math.floor(c.B*255) .. ")'> <b>" .. LocalPlayer.DisplayName .. "</b> </font>"
 	for color, objects in next, Library.ThemeObjects do
 		local themeColor = Library.CurrentTheme[color]
 		for _, obj in next, objects do
@@ -875,23 +875,23 @@ function Library:create(options)
 		Name = "UI Drag Speed",
 		Description = "How smooth the dragging looks.",
 		Max = 20,
-		Default = 14,
+		Default = 20,
 		Callback = function(value)
 			Library.DragSpeed = (20 - value)/100
 		end,
 	}
 
 	local creditsTab = Library.tab(mt, {
-		Name = "Credits",
+		Name = "Information",
 		Internal = creditsTabIcon,
 		Icon = "http://www.roblox.com/asset/?id=8577523456"
 	})
 
 	rawset(mt, "creditsContainer", creditsTab.container)
 
-	creditsTab:credit{Name = "Abstract", Description = "UI Library Developer", Discord = "Abstract#8007", V3rmillion = "AbstractPoo"}
-	creditsTab:credit{Name = "Deity", Description = "UI Library Developer", Discord = "Deity#0228", V3rmillion = "0xDEITY"}
-	creditsTab:credit{Name = "Repository", Description = "UI Library Repository", Github="https://github.com/deeeity/mercury-lib/blob/master/src.lua"}
+	creditsTab:credit{Name = "Coded By:", Description = "Intellectual.Co", Discord = "Drumman."}
+	creditsTab:credit{Name = "Appreciation", Description = "UI Script Developer", Discord = "Drumman."}
+	creditsTab:credit{Name = "Yap", Description = "Free Scripts on my Github>", Github="https://github.com/Intellectual-Activities/Scripts"}
 
 	return mt
 end
