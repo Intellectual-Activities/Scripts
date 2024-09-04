@@ -1,94 +1,12 @@
----\\Test2//---
-local screenGui = Instance.new("ScreenGui")
-screenGui.Parent = game.CoreGui
-
-local frame = Instance.new("Frame")
-frame.Size = UDim2.new(0, 100, 0, 30)
-frame.Position = UDim2.new(0, 10, 0, 400) 
-frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-frame.BorderSizePixel = 0
-frame.Parent = screenGui
-
-local frameCorner = Instance.new("UICorner")
-frameCorner.CornerRadius = UDim.new(0, 8)
-frameCorner.Parent = frame
-
-local closeButton = Instance.new("TextButton")
-closeButton.Text = "Close"
-closeButton.Size = UDim2.new(1, 0, 1, 0)
-closeButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-closeButton.TextColor3 = Color3.fromRGB(255, 0, 0)
-closeButton.Font = Enum.Font.SourceSansBold
-closeButton.TextSize = 16
-closeButton.TextScaled = true
-closeButton.TextStrokeTransparency = 0.4
-closeButton.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-closeButton.Parent = frame
-
-local buttonCorner = Instance.new("UICorner")
-buttonCorner.CornerRadius = UDim.new(0, 8)
-buttonCorner.Parent = closeButton
-
-local buttonStroke = Instance.new("UIStroke")
-buttonStroke.Thickness = 1
-buttonStroke.Color = Color3.fromRGB(255, 0, 0)
-buttonStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-buttonStroke.Parent = closeButton
-
-local isOpen = true
-
-local function toggleButton()
-    if isOpen then
-        closeButton.Text = "Open"
-    else
-        closeButton.Text = "Close"
-    end
-    isOpen = not isOpen
-end
-
-closeButton.MouseButton1Click:Connect(function()
-    toggleButton()
-    self.Toggled = not self.Toggled
-    Library:show(self.Toggled)
-end)
-
-local UIS = game:GetService("UserInputService")
-
-local dragging
-local dragInput
-local dragStart
-local startPos
-
-local function update(input)
-    local delta = input.Position - dragStart
-    frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-end
-
-frame.InputBegan:Connect(function(input)
-    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-        dragging = true
-        dragStart = input.Position
-        startPos = frame.Position
-
-        input.Changed:Connect(function()
-            if input.UserInputState == Enum.UserInputState.End then
-                dragging = false
-            end
-        end)
-    end
-end)
-
-frame.InputChanged:Connect(function(input)
-    if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-        dragInput = input
-    end
-end)
-
-UIS.InputChanged:Connect(function(input)
-    if dragging and input == dragInput then
-        update(input)
-    end
-end)
+---\\Test3//---
+settingsTab:Button{
+	Name = "TTT",
+	Description = nil,
+	Callback = function() 
+		self.Toggled = not self.Toggled
+		Library:show(self.Toggled)
+	end
+}
 
 
 local TweenService = game:GetService("TweenService")
