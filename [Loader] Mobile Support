@@ -868,7 +868,7 @@ function Library:create(options)
         Callback = function()
             self.Toggled = not self.Toggled
             Library:show(self.Toggled)
-        end
+        end,
     }
     
     
