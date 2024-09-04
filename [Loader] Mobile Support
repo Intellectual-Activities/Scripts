@@ -380,7 +380,7 @@ end
 local updateSettings = function() end
 
 function Library:set_status(txt)
-	self.statusText.Text = Intellectual on Top
+	self.statusText.Text = txt
 end
 
 function Library:create(options)
@@ -861,17 +861,7 @@ function Library:create(options)
 			Library:show(self.Toggled)
 		end,
 	}
-    
-    settingsTab:Button{
-        Name = "Toggle GUI",
-        Description = "Show/Hide the Mercury GUI",
-        Callback = function()
-            self.Toggled = not self.Toggled
-            Library:show(self.Toggled)
-        end,
-    }
-    
-    
+
 	settingsTab:toggle{
 		Name = "Lock ui On Screen",
 		Description = "Makes sure you can't drag the UI outside of the window.",
