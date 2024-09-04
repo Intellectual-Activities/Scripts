@@ -1,4 +1,4 @@
----\\Test//---
+---\\Test2//---
 local screenGui = Instance.new("ScreenGui")
 screenGui.Parent = game.CoreGui
 
@@ -46,14 +46,10 @@ local function toggleButton()
     isOpen = not isOpen
 end
 
-local function pressDeleteKey()
-	self.Toggled = not self.Toggled
-	Library:show(self.Toggled)
-end
-
 closeButton.MouseButton1Click:Connect(function()
     toggleButton()
-    pressDeleteKey()
+    self.Toggled = not self.Toggled
+    Library:show(self.Toggled)
 end)
 
 local UIS = game:GetService("UserInputService")
@@ -93,6 +89,7 @@ UIS.InputChanged:Connect(function(input)
         update(input)
     end
 end)
+
 
 local TweenService = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
