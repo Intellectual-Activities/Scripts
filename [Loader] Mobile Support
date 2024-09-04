@@ -881,16 +881,14 @@ function Library:create(options)
 		end,
 	}
 	
-	settingsTab:slider{
-		Name = "Test",
-		Description = "How smooth the dragging looks.",
-		Max = 20,
-		Default = 20,
-		Callback = function(value)
+	settingsTab:Button{
+		Name = "TTT",
+		Description = nil,
+		Callback = function() 
+			self.Toggled = not self.Toggled
 			Library:show(self.Toggled)
-		end,
-	}  
-  
+		end
+	}
     
     local creditsTab = Library.tab(mt, {
 		Name = "Information",
