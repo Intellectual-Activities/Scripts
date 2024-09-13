@@ -1,6 +1,6 @@
 ---join the discord if you need any help or if youd like me to add a specific command.
-getgenv().URL = "" ---Put the pastebin url that u want to use to excute a command
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Intellectual-Activities/Scripts/Scripts/%5BLoader%5D%20universal%20admin%20commands"))()
+getgenv().URL = "" ---Put the Pastebin URL or Github URL in "getgenv().URL = """
+loadstring(game:HttpGet("NOT DONE"))()
 ---[[
 Commands available:
 
