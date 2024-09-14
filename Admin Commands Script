@@ -1,7 +1,7 @@
----join the discord if you need any help or if youd like me to add a specific command.
-getgenv().URL = "" ---Put the Pastebin URL or Github URL in "getgenv().URL = """
+---\\Join the Discord if you need help or would like me to create a specific command for you :)//---
+getgenv().URL = "" --- Place ur Pastebin, pastefy, or Github Url here "getgenv().URL = "" " 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Intellectual-Activities/-Loaders-/main/Admin%20Commands%20%5BLoader%5D"))()
----[[
+--[[
 Commands available:
 
 1. bring all   
@@ -20,18 +20,18 @@ Commands available:
 
 Examples:
 
-1. bring all
+1. bring all   [Dont work rn will upd in the future]
 
-2. bring Intellectual
+2. bring Intellectual [Dont work rn will upd in the future]
 
-3. kick all [testing this script for kick all]
+3. kick all [bc i can]
 
-4. kick jxstin87 [testing this script for kick target]
+4. kick jxstin87 [bc i can]
 
 5. spawnarena all 
 
 6. arena jxstin87
 
 7. destroy arena
-
 ]]
+
