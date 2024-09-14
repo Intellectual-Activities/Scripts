@@ -1,6 +1,6 @@
 ---join the discord if you need any help or if youd like me to add a specific command.
 getgenv().URL = "" ---Put the Pastebin URL or Github URL in "getgenv().URL = """
-loadstring(game:HttpGet("NOT DONE"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Intellectual-Activities/-Loaders-/main/Admin%20Commands%20%5BLoader%5D"))()
 ---[[
 Commands available:
 
