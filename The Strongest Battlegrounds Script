@@ -1,5 +1,15 @@
-Get it here
+script_key="REPLACE WITH KEY";
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/fd739c360ab73bd722fe0399cbcb118f.lua"))()
 
-https://discord.gg/Mkcta6ZGCx
+---Get your key from: https://ads.luarmor.net/get_key?for=Strongest_Battlegrounds_Script-UuFeXzzUTOXc
+---Join the Discord if you need help or want to be part of our community: https://discord.com/invite/Mkcta6ZGCx
 
-YES ITS FREE!!
+---Games Supported:
+
+---. The Strongest Battle Grounds
+
+---. Iron Man Reimagined
+
+---. Supernatural [BETA 🩸]
+
+---. Streetwarz 2 [Soon]
